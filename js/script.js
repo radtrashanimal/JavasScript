@@ -81,3 +81,100 @@ while (j > 0) {
     console.log(j);
     j--;
 }
+//Actividad 4: Objetos y Arreglos
+//
+
+let pokemon2 = {
+    name: 'squirtle',
+    type: 'water',
+    level: '8',
+    description: 'Squirtle is a water-type Pokémon known for its protective shell. It evolves into Wartortle and eventually into Blastoise.'
+};
+
+
+let pokedex = [
+    {
+        name: 'charmander',
+        type: 'fire',
+        level: '5',
+        description: 'Charmander is a fire-type Pokémon known for its fiery tail. It evolves into Charmeleon and eventually into Charizard.'
+    },
+    {
+        name: 'squirtle',
+        type: 'water',
+        level: '8',
+        description: 'Squirtle is a water-type Pokémon known for its protective shell. It evolves into Wartortle and eventually into Blastoise.'
+    },
+    {
+        name: 'bulbasaur',
+        type: 'grass/poison',
+        level: '7',
+        description: 'Bulbasaur is a grass/poison-type Pokémon known for the plant bulb on its back. It evolves into Ivysaur and eventually into Venusaur.'
+    },
+    {
+        name: 'pikachu',
+        type: 'electric',
+        level: '10',
+        description: 'Pikachu is an electric-type Pokémon known for its yellow fur and ability to generate electricity. It evolves from Pichu and can evolve into Raichu.'
+    }
+];
+
+let pokedex2 = [
+    {
+        name: 'eevee',
+        type: 'normal',
+        level: '5',
+        description: 'Eevee is a normal-type Pokémon known for its multiple evolution options. It can evolve into various forms such as Vaporeon, Jolteon, Flareon, and more.'
+
+    },
+    {
+        name: 'glaceon',
+        type: 'ice',
+        level: '10',
+        description: 'Glaceon is an ice-type Pokémon and one of the evolutions of Eevee. It evolves from Eevee when exposed to an Ice Stone or when leveled up near an Ice Rock.'
+
+    },
+    {
+        name: 'vaporeon',
+        type: 'water',
+        level: '15',
+        description: 'Vaporeon is a water-type Pokémon and one of the evolutions of Eevee. It evolves from Eevee when exposed to a Water Stone.'
+    }
+];
+
+console.log(pokedex2[2].name);
+console.log(pokedex2.length);
+
+//Actividad 5: Push y Pop
+
+let Array = [1, 2, 3, 4, 5];
+
+console.log(Array);
+
+Array.push(6);
+
+console.log(Array);
+
+//Actividad 6: For y ForEach
+// Usar ForEach para agregar un nuevo elemento, si el elemento ya existe, no agregarlo, si no existe, agregarlo.'
+
+let nuevoPokemon = {
+    name: 'jolteon',
+    type: 'electric',
+    level: '20',
+    description: 'Jolteon is an electric-type Pokémon and one of the evolutions of Eevee. It evolves from Eevee when exposed to a Thunder Stone.'
+};
+
+let existe = false;
+
+pokedex2.forEach(function(pokemon) {
+    existe = true;
+    console.log('El pokemon ' + pokemon.name + ' ya existe en la pokedex2');
+});
+
+if (!existe) {
+    pokedex2.push(nuevoPokemon);
+    console.log('El pokemon ' + nuevoPokemon.name + ' ha sido agregado a la pokedex2');
+} else {
+    console.log('El pokemon ' + nuevoPokemon.name + ' no se ha agregado a la pokedex2 porque ya existe');
+}
