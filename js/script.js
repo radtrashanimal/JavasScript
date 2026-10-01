@@ -178,3 +178,10 @@ if (!existe) {
 } else {
     console.log('El pokemon ' + nuevoPokemon.name + ' no se ha agregado a la pokedex2 porque ya existe');
 }
+pokedex2.find(function(pokemon) {
+    if (pokemon.name === 'jolteon') {
+        console.log('El pokemon ' + pokemon.name + ' ya existe en la pokedex2');
+    }
+});
+
+console.log(pokedex2);
